@@ -1,0 +1,19 @@
+* {    
+    font-family: 'Rubik', 'Roboto', sans-serif;
+    font-size: 18px;
+    box-sizing: border-box;
+    margin: 0;
+  }
+
+  html {
+    height: 100%;
+  }
+
+  body {
+    height: 100%;
+    background-color: var(--background);
+  }
+  
+  pre,.monospaced {
+    font-family: var(--monospace);  
+  }

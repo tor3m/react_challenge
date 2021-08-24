@@ -1,17 +1,38 @@
-import React from 'react';
-// import logo from './logo.svg';
-import temporary from './images/work-in-progress.png';
-import './App.css';
+import React, { Switch, Route, Link } from "react-router-dom";
+import PostAdd from './components/PostAdd';
+import PostEdit from './components/PostEdit';
+import PostList from './components/PostList';
+import "./stylesheets/App.scss";
 
-function App() {
+const App = () => {
   return (
     <div className="App">
-      <header className="App-header">
-        <p>
-          Hello Wefox!
-        </p>
-        <img src={temporary} className="App-logo" alt="logo" />
-      </header>
+      <nav className="header-nav">
+        <Link to="/">
+          Wefox-Club
+        </Link>
+        <ul className="header-list">
+          <li className="header-list">
+            <Link to={"/add"} className="header-item">
+              Add Post
+            </Link>
+          </li>
+        </ul>
+      </nav>
+
+      <div className="main-container">
+        <div className="main">
+          <Switch>
+            <Route exact path="/add" component={PostAdd} />
+            <Route path="/:id" component={PostEdit} />
+            <Route component={PostList} />
+          </Switch>
+        </div>
+      </div>
+
+      <footer>
+        Copyright (C) 2021 Tor3m
+      </footer>
     </div>
   );
 }
