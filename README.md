@@ -1,5 +1,6 @@
 # wefox Frontend Challenge
 
+![wefox-challenge](https://user-images.githubusercontent.com/81690198/130621770-b54e57ff-42de-4aa8-8fa0-742e7342682b.png)
 
 **This project is a template for the challenge, you can change all the files you consider change**, it was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
